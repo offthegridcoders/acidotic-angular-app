@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="acidoticRacing" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li ui-sref-active="active">
+          <a ui-sref="community">community</a>
+        </li>
+        <li ng-class="{'active': season}">
+          <a ui-sref="{{defaultSeason}}">competition</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="charity">charity</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="about">about</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="contact">contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div ui-view="main"></div>
+    <footer>footer section</footer>
+  </body>
+</html>
