@@ -1,4 +1,4 @@
-# acidotic Racing Official Website
+# acidotic Racing Official Web Application
 
 ## Part of Off The Grid Coders
 
