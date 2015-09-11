@@ -10,7 +10,8 @@ angular.module( 'acidoticRacing', [
   'acidoticRacing.community',
   'acidoticRacing.about',
   'acidoticRacing.contact',
-  'ui.router'
+  'ui.router',
+  'firebase'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, DEFAULT_SEASON ) {
